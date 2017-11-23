@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="icon" href="favi.png"/>
+		<title>Charlotte's Web</title>
+		<style>
+			#original{
+				width:30%;
+				height:84%;
+				border-radius:20px;
+				background-color:white;
+				position:absolute;
+				left:35%;
+				top:8%;
+			}
+			.l{
+				font-family:Orator Std;
+				position:absolute;
+				left:40%;
+			}
+			.s{
+				border:none;
+				width:50.8%;
+				background-color:#060d20;
+				color:#ffffff;
+				height:6%;
+				position:relative;
+				left:40%;
+				font-family:Orator Std;
+				font-size:20;
+				padding-top:6px;
+			}
+			#f{
+				position:relative;
+				right:14%;
+			}
+			.focus{
+				width:120%;
+				height:30px;
+			}
+			#back{
+				position:relative;
+				left:6px;
+				top:4px;
+				font-family:Orator Std;
+				font-size:20;
+				color:#1b2347;
+				text-decoration:none;
+				width:50px;
+				height:18px;
+				padding:2px 2px;
+			}
+			#back_hold{
+				position:relative;
+				left:80%;
+				top:5%;
+				width:12%;
+				height:7%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="original">
+		<div id='back_hold'><a id='back' href='index.php'>Back</a></div>
+		<br/><br/>
+		<center><img src="logo_sign.jpg" width="55%" height="28%"/></center>
+		<br/><br/>
+		<form action="checkuser.php" method="POST" id="f">
+			<label class="l">Username <br/> <center> <input class="focus" type="text" name="un" required/> </center> </label><br/><br/><br/><br/>
+			<label class="l">Password <br/> <center> <input class="focus" type="password" name="pw" id="p" required/> </center> </label><br/><br/><br/><br/>
+			<input class="s" type="submit" value="Sign In"/>
+		</form>
+		</div>
+		<audio id="audio" src="1.mp3" loop="true"/>
+	</body>
+	<script>
+		var audio = document.getElementById("audio");
+		if(localStorage.getItem("audio")=="play")
+			audio.play();
+		var theme = localStorage.getItem("theme");
+		if(theme=='url("theme1.jpg")'|| theme=="url('theme1.jpg')" || theme=='url(theme1.jpg)')
+			document.body.style.backgroundImage="url(bg_1.jpg)";
+		else if(theme=='url("theme2.jpg")' || theme=="url('theme2.jpg')" || theme=='url(theme1.jpg)')
+			document.body.style.backgroundImage="url(bg_2.jpg)";
+	</script>	
+</html>

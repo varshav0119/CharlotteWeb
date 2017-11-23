@@ -1,0 +1,341 @@
+<html>
+	<head>
+	<link rel="icon" href="favi.png"/>
+	<title>Charlotte's Web</title>
+		<style>
+		body{
+			background-color:black;
+		}
+		.flip-container {
+			position:relative;
+			left:100px;
+			top:100px;
+			perspective:1000;
+		}
+
+		/* flip the pane when hovered 
+		.flip-container:hover .flipper, .flip-container.hover .flipper {
+		  transform: rotateY(180deg);
+		}*/
+		
+		.flipper{
+			float:left;
+		}
+
+		.flip-container{
+			width:309;
+			height:309;
+		}
+		.flipper, .front, .back {
+			width: 103px;
+			height: 103px;
+		}
+
+		/* flip speed goes here */
+		.flipper {
+			transition: 0.6s;
+			transform-style: preserve-3d;
+			position: relative;
+		}
+
+		/* hide back of pane during swap */
+		.front, .back {
+		  backface-visibility: hidden;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		  -webkit-transition:0.6s;
+		  -webkit-transform-style:preserve-3d;
+		  transition:0.6s;
+		  transform-style:preserve-3d;
+		}
+		
+		/* front pane, placed above back */
+		.front{
+		  -webkit-transform: rotateY(0deg);
+		  transform: rotateY(0deg);
+		  background: rgb(81, 211, 133);
+		  z-index: 2;
+		}
+		
+		.front{
+			background-color:black;
+		}
+		
+		#b1{
+			background-image:url(p1.png);
+		}
+		#b2{
+			background-image:url(p2.png);
+		}
+		#b3{
+			background-image:url(p3.png);
+		}
+		#b4{
+			background-image:url(p4.png);
+		}
+		#b5{
+			background-image:url(p5.png);
+		}
+		#b6{
+			background-image:url(p6.png);
+		}
+		#b7{
+			background-image:url(p7.png);
+		}
+		#b8{
+			background-image:url(p8.png);
+		}
+		#b9{
+			background-image:url(p9.png);
+		}
+		.back {
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(-180deg);
+		}
+		#w1{
+			position:absolute;
+			left:460;
+			top:150;
+		}
+		#w2{
+			position:absolute;
+			left:530;
+			top:150;
+		}
+		#w3{
+			position:absolute;
+			left:650;
+			top:150;
+		}
+		#w4{
+			position:absolute;
+			left:715;
+			top:150;
+		}
+		#w5{
+			position:absolute;
+			left:650;
+			top:200;
+		}
+		#w6{
+			position:absolute;
+			left:720;
+			top:200;
+		}
+		#w7{
+			position:absolute;
+			left:860;
+			top:200;
+		}
+		#w8{
+			position:absolute;
+			left:930;
+			top:200;
+		}
+		#w9{
+			position:absolute;
+			left:1060;
+			top:200;
+		}	
+		#wint{
+			font-family:Requited Script Demo, Times New Roman;
+			font-size:90;
+			position:absolute;
+			left:550;
+			top:200;
+			color:#bebfc1;			
+		}
+		#wt{
+			font-family:Orator Std;
+			font-size:25px;
+			position:absolute;
+			color:white;
+			bottom:50px;
+			left:50px;
+		}
+		
+		#sign{
+			font-family:Orator Std;
+			font-size:25px;
+			position:absolute;
+			color:#bebfc1;
+			bottom:40px;
+			right:60px;
+		}
+		
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		li {
+			float: left;
+		}
+		li a{
+			display: block;
+			font-family:Orator Std;
+			font-size:20px;
+			color: black;
+			text-align: center;
+			padding: 14.75px 38px;
+			text-decoration: none;
+		}
+		li a:hover {
+			background-color:#adadab;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="missiondet.php">Mission Details</a></li>
+			<li><a id="up" href="signup.html">Sign Up</a></li>
+			<li><a id="in" href="signin.html">Sign In</a></li>
+			<li><a href="credits.html">Credits</a></li>
+		</ul>
+		<div class="flip-container">
+			<div class="flipper">
+				<div id="f1" class="front">
+				</div>
+				<div id="b1" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f2" class="front">
+				</div>
+				<div id="b2" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f3" class="front">
+				</div>
+				<div id="b3" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f4" class="front">
+				</div>
+				<div id="b4" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f5" class="front">
+				</div>
+				<div id="b5" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f6" class="front">
+				</div>
+				<div id="b6" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f7" class="front">
+				</div>
+				<div id="b7" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f8" class="front">
+				</div>
+				<div id="b8" class="back">
+				</div>
+			</div>
+			<div class="flipper">
+				<div id="f9" class="front">
+				</div>
+				<div id="b9" class="back">
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var coo = sessionStorage.getItem("out");
+			if(coo=="yes")
+			{
+				var upP = document.getElementById("up").parentNode;
+				var i = document.getElementById("in");
+				upP.parentNode.removeChild(upP);
+				i.innerHTML="Sign Out";
+				i.href="signout.php";
+			}
+			else
+				window.location.href="index.php";
+		var flipper = document.querySelectorAll(".flipper");
+		var interval = window.setInterval(call,200);
+		var count=1;
+		function flip(i)
+		{
+			flipper[i].style.transform="rotateY(180deg)";
+			flipper[i].id="flipped";
+			arrange(i);
+		}
+		function call()
+		{
+			var flipped = document.querySelectorAll("#flipped");
+			if(flipped.length==9)
+			{
+				window.clearInterval(interval);
+				win();
+				return;
+			}
+			var r=0;
+			do{
+			r= parseInt(Math.random()*9);
+			}while(flipper[r].id=="flipped");
+			flip(r);
+		}
+		function arrange(i)
+		{
+			i=i+1;
+			var word = document.createElement("div");
+			word.id="w"+i;
+			console.log(word.id);
+			count++;
+			if(i==1)
+				word.textContent="the";
+			else if(i==2)
+				word.textContent="harder";
+			else if(i==3)
+				word.textContent="the";
+			else if(i==4)
+				word.textContent="battle,";
+			else if(i==5)
+				word.textContent="the";
+			else if(i==6)
+				word.textContent="sweeter";
+			else if(i==7)
+				word.textContent="the";
+			else if(i==8)
+				word.textContent="victory";
+			else if(i==9)
+				word.textContent="...";
+			word.style.color="white";
+			word.style.fontFamily="Orator Std";
+			word.style.fontSize="30px";
+			document.body.appendChild(word);
+		}
+		function win()
+		{
+			var wint = document.createElement("h1");
+			wint.textContent="you win";
+			wint.id="wint";
+			document.body.appendChild(wint);
+			var wt = document.createElement("p");
+			wt.textContent="The Web releases its hold on you. Do you realise now? Freedom is what you sought all along. Well done.";
+			wt.id="wt";
+			document.body.appendChild(wt);
+			var sign = document.createElement("div");
+			sign.textContent="~ The Webmaster";
+			sign.id="sign";
+			document.body.appendChild(sign);
+			document.body.style.backgroundImage="url(flipper.jpg)";
+		}
+	</script>
+</html>

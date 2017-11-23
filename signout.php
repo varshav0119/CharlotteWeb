@@ -1,0 +1,12 @@
+<?php
+	session_start();
+	unset($_SESSION["Username"]);
+?>
+<html>
+	<body>
+	</body>
+	<script>
+		sessionStorage.setItem("out","no");
+		window.location.href="index.php";
+	</script>
+</html>

@@ -1,0 +1,28 @@
+Title: 
+
+	Charlotte's Web Minigames
+	
+Team Members:
+
+	Vaani Sundaresh 01FB16ECS429
+	Akshara Gupta 01FB16ECS485
+	Varsha Venkatasubramanian 01FB16ECS432
+	
+Description:
+
+	Charlotte's Web is a website that presents mini-games with an interwoven storyline. The premise of this game is that the user
+	is trapped in the spider's 'Web'. The user will be presented with a series of mini-games, solving each holds the key to the 
+	next. The objective is to navigate through the pages successfully and escape the Web before time runs out.
+
+	Some key points are:
+		Users must register and sign in to play this game (MySQL and sessions).
+		Users can change the theme and audio settings of the homepage based on their preference (Local Storage).
+		The three mini-games included are Hangman, Memory Card Game and Scavenger Hunt (HTML5 canvas, CSS3 animations).
+		The mini-games can be played in different orders based on an initial selection, and each one must be completed before
+		playing the next (Javascript Cookies).
+		
+	Javascript is used extensively to accomplish basic client-side validation, for the gameplay and DOM manipulation. PHP is used
+	to maintain sessions and to access the database of users and provide server-side validation. CSS is used for the presentation 
+	of the pages.
+		
+	

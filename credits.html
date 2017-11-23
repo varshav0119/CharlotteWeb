@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link rel="icon" href="favi.png"/>
+		<title>Charlotte's Web</title>
+		<style>
+			#original{
+				width:40%;
+				height:60%;
+				border-radius:20px;
+				background-color:white;
+				position:absolute;
+				left:30%;
+				top:20%;
+			}
+			ul li{
+				font-family: Poor Richard;
+				font-size:20;
+			}
+			center{
+				position:relative;
+				top:70px;
+				font-family:Poor Richard;
+				font-size:20;
+			}
+			#back{
+				position:relative;
+				left:6px;
+				top:4px;
+				font-family:Orator Std;
+				font-size:20;
+				color:#1b2347;
+				text-decoration:none;
+				width:50px;
+				height:18px;
+				padding:2px 2px;
+			}
+			#back_hold{
+				position:relative;
+				left:84%;
+				top:5%;
+				width:12%;
+				height:7%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="original">
+		<div id="back_hold"><a id="back" href="index.php">Back</a></div>
+		<center>
+			Spiderweb - Photo by Nicolas Picard on Unsplash<br/>
+			Spiderweb - Photo by Aaron Burden on Unsplash<br/>
+			Spiderweb - Photo by Shivendu Shukla on Unsplash<br/>
+			Attic - Photo by Christelle Bourgeois on Unsplash <br/>
+			Easter Eggs - Photo on Pexels.com<br/>
+			Easter Eggs Coloured - all-free-download.com<br/>
+			Crow Border - iwantimage.com<br/>
+			Close Button - Free Icons Download<br/> 
+			<a style="text-decoration:none" href='https://www.freepik.com/free-vector/vector-illustration-of-a-cartoon-interior-of-an-orange-home-room-a-living-room-with-two-soft-armchairs_1215984.htm'>Living Room Vector- designed by Freepik</a> 
+		</center>
+		</div>
+		<audio id="audio" src="1.mp3" loop="true"/>
+	</body>
+	<script>
+		var audio = document.getElementById("audio");
+		if(localStorage.getItem("audio")=="play")
+			audio.play();
+		var theme = localStorage.getItem("theme");
+		console.log(theme);
+		if(theme=='url("theme1.jpg")'|| theme=="url('theme1.jpg')" || theme=='url(theme1.jpg)')
+			document.body.style.backgroundImage="url(bg_1.jpg)";
+		else if(theme=='url("theme2.jpg")' || theme=="url('theme2.jpg')" || theme=='url(theme1.jpg)')
+			document.body.style.backgroundImage="url(bg_2.jpg)";
+	</script>	
+</html>
